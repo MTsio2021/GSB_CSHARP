@@ -29,8 +29,10 @@ namespace GSB_CSHARP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lb1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +51,10 @@ namespace GSB_CSHARP
             this.lb1.Name = "lb1";
             this.lb1.Size = new System.Drawing.Size(0, 13);
             this.lb1.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -70,6 +76,7 @@ namespace GSB_CSHARP
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lb1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
