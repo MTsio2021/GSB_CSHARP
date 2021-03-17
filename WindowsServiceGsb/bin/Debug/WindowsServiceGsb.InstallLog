@@ -1,0 +1,34 @@
+﻿Installation de l'assembly 'D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.InstallLog
+   assemblypath = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe
+Installation du service ServiceGsb en cours...
+Le service ServiceGsb a été installé avec succès.
+Création d'une source EventLog ServiceGsb dans le journal Application...
+Validation de l'assembly 'D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.InstallLog
+   assemblypath = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe
+Désinstallation de l'assembly 'D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.InstallLog
+   assemblypath = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe
+Suppression de la source EventLog ServiceGsb.
+Le service ServiceGsb est en cours de suppression du système...
+Le service ServiceGsb a été retiré avec succès du système.
+Installation de l'assembly 'D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.InstallLog
+   assemblypath = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe
+Installation du service ServiceGsb en cours...
+Le service ServiceGsb a été installé avec succès.
+Création d'une source EventLog ServiceGsb dans le journal Application...
+Validation de l'assembly 'D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.InstallLog
+   assemblypath = D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\WindowsServiceGsb.exe

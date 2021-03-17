@@ -45,7 +45,7 @@ namespace GSB_CSHARP
 
         private void InitializeTimer()
         {
-            timer1.Interval = 1000;
+            timer1.Interval = 86400000;
             timer1.Tick += new EventHandler(timer1_Tick);
 
             timer1.Enabled = true;
