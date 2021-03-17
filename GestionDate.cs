@@ -12,7 +12,7 @@ namespace GSB_CSHARP
         DateTime ajd = DateTime.Now;
         public String dateJour()
         {
-            String asString = ajd.ToString("yyyy-MM-dd");
+            String asString = ajd.ToString("dd/MM/yyyy");
             return asString;
         }
 

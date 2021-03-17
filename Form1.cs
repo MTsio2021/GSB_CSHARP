@@ -32,13 +32,15 @@ namespace GSB_CSHARP
             myDate = new GestionDate();
 
             date1 = myDate.moisCourant();
-            lb1.Text = date1;
+           
             myCom = myConnection.reqExec("Select * from testfichefrais where mois='" + date1 + "'");
 
             dt = new DataTable();
             dt.Load(myCom.ExecuteReader());
 
             dataGridView1.DataSource = dt;
+
+            myConnection.closeConnection();
         }
 
         private void InitializeTimer()
@@ -46,35 +48,57 @@ namespace GSB_CSHARP
             timer1.Interval = 1000;
             timer1.Tick += new EventHandler(timer1_Tick);
 
+            timer1.Enabled = true;
+
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Stop();
 
             try {
 
-                timer1.Start();
+
 
                 GestionDate date = new GestionDate();
                 myConnection = ConnexionSql.getInstance("localhost", "gsb-v1", "root", "");
-                dateVerif = Convert.ToInt32(date.dateJour().Substring(0, 1));
+                dateVerif = Convert.ToInt32(date.dateJour().Substring(0, 2));
+              
 
-                if (dateVerif >= 1 && dateVerif <= 20)
+                if (dateVerif >= 1 && dateVerif <= 10)
                 {
 
                     myConnection.openConnection();
 
-                    myCom = myConnection.reqExec("update testfichefrais set idEtat ='CL' where idEtat ='CR'");
+                    myCom = myConnection.reqExec("update testfichefrais set idEtat ='CL' where idEtat ='CR' and mois = '" + date.moisPrecedent()+"'");
                     myCom.ExecuteNonQuery();
 
                     myDate = new GestionDate();
-                    date1 = myDate.moisCourant();
+                    date1 = myDate.moisPrecedent();
 
                     myCom = myConnection.reqExec("Select * from testfichefrais where mois='" + date1 + "'");
                     dt = new DataTable();
                     dt.Load(myCom.ExecuteReader());
 
                     dataGridView1.DataSource = dt;
+
+                    myConnection.closeConnection();
+                }
+                else if (dateVerif >= 15 && dateVerif <= 31)
+                {
+                    myConnection.openConnection();
+
+                    myCom = myConnection.reqExec("update testfichefrais set idEtat ='MP' where idEtat ='RB' and mois = '" + date.moisPrecedent() + "'");
+                    myCom.ExecuteNonQuery();
+
+                    myDate = new GestionDate();
+                    date1 = myDate.moisPrecedent();
+
+                    myCom = myConnection.reqExec("Select * from testfichefrais where mois='" + date1 + "'");
+                    dt = new DataTable();
+                    dt.Load(myCom.ExecuteReader());
+
+                    dataGridView1.DataSource = dt;
+
+                    myConnection.closeConnection();
                 }
 
             }
