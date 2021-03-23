@@ -25,7 +25,10 @@ namespace WindowsServiceGsb
             InitializeComponent();
             InitializeTimer();
         }
-
+        /// <summary>
+        /// Initialisation au lancement du service windows
+        /// </summary>
+        /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
             InitializeTimer();
@@ -35,7 +38,9 @@ namespace WindowsServiceGsb
         protected override void OnStop()
         {
         }
-
+        /// <summary>
+        /// Création du timer
+        /// </summary>
         private void InitializeTimer()
         {
             timer1.Interval = 10000;
@@ -44,18 +49,25 @@ namespace WindowsServiceGsb
             timer1.Enabled = true;
 
         }
+
+        /// <summary>
+        /// Fonction qui permet la mise à jour des fiches de frais en fonctions de la date du jour et du mois de ces dernières
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             try
             {
-
-
-
+                
+                
+                //Initialisation de l'objet date
                 GestionDate date = new GestionDate();
                 myConnection = ConnexionSql.getInstance("localhost", "gsb-v1", "root", "");
                 dateVerif = Convert.ToInt32(date.dateJour().Substring(0, 2));
 
+                //Si la date du jour est entre 1 et 10 on passe l'état des fiches du mois précédent à CL Si elle est à l'état CR 
 
                 if (dateVerif >= 1 && dateVerif <= 10)
                 {
@@ -70,7 +82,9 @@ namespace WindowsServiceGsb
 
                     myConnection.closeConnection();
                 }
-                else if (dateVerif >= 15 && dateVerif <= 31)
+
+                //Si la date du jour est entre 10 et 20 on passe l'état des fiches du mois précédent à MP Si elle est à l'état RB 
+                else if (dateVerif >= 20 && dateVerif <= 31)
                 {
                     myConnection.openConnection();
 

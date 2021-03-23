@@ -13,56 +13,90 @@ namespace GSB_CSHARP
 {
     public partial class Form1 : Form
     {
+
+        //Initialisation des variables / objets
+
         private MySqlCommand myCom;
         private ConnexionSql myConnection;
         private GestionDate myDate;
         private DataTable dt;
         private string date1;
         private int dateVerif;
+
         public Form1()
         {
             InitializeComponent();
             InitializeTimer();
         }
-
+        /// <summary>
+        /// Chargement du formulair, connexion et remplissage des datatables et datagrid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+       
         private void Form1_Load_1(object sender, EventArgs e)
         {
+
+            //Connection à la bdd
             myConnection = ConnexionSql.getInstance("localhost", "gsb-v1", "root", "");
             myConnection.openConnection();
+
+
             myDate = new GestionDate();
 
-            date1 = myDate.moisCourant();
-           
+
+            //Selection des fiche du mois précédent en fonction de la date du jour
+            date1 = myDate.moisPrecedent();
+            lb1.Text = date1;
             myCom = myConnection.reqExec("Select * from testfichefrais where mois='" + date1 + "'");
 
+
+            //Remplissage des datatables
             dt = new DataTable();
             dt.Load(myCom.ExecuteReader());
 
+
+            //Remplissage du datagrid view
             dataGridView1.DataSource = dt;
 
+
+            //Fermeture de la connection
             myConnection.closeConnection();
         }
 
+
+        /// <summary>
+        /// Création du timer
+        /// </summary>
         private void InitializeTimer()
         {
-            timer1.Interval = 86400000;
+            timer1.Interval = 5000;
             timer1.Tick += new EventHandler(timer1_Tick);
 
             timer1.Enabled = true;
 
         }
+        /// <summary>
+        /// Fonction modifiant les états en fonctions du timer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             try {
 
 
+                //Initialisation de l'objet de date + connection à la bdd
 
                 GestionDate date = new GestionDate();
                 myConnection = ConnexionSql.getInstance("localhost", "gsb-v1", "root", "");
-                dateVerif = Convert.ToInt32(date.dateJour().Substring(0, 2));
-              
 
+
+                dateVerif = Convert.ToInt32(date.dateJour().Substring(0, 2));
+               
+
+                //Si la date du jour est entre le 1 et le 10 du mois alors l'état des fiches de frais du mois précédent change de CR à CL
                 if (dateVerif >= 1 && dateVerif <= 10)
                 {
 
@@ -82,7 +116,9 @@ namespace GSB_CSHARP
 
                     myConnection.closeConnection();
                 }
-                else if (dateVerif >= 15 && dateVerif <= 31)
+
+                //Si la date du jour est entre le 10 et le 20 du mois alors l'état des fiches de frais du mois précédent change de RB à MP
+                else if (dateVerif >= 20 && dateVerif <= 31)
                 {
                     myConnection.openConnection();
 

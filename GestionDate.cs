@@ -10,12 +10,21 @@ namespace GSB_CSHARP
     {
 
         DateTime ajd = DateTime.Now;
+
+        /// <summary>
+        /// Retourne la date du jour
+        /// </summary>
+        
         public String dateJour()
         {
             String asString = ajd.ToString("dd/MM/yyyy");
             return asString;
         }
 
+        /// <summary>
+        /// Retourne le mois précédent par rapport à la date d'aujourd'hui
+        /// </summary>
+        
         public String moisPrecedent()
         {
             ajd = ajd.AddMonths(-1);
@@ -23,6 +32,11 @@ namespace GSB_CSHARP
 
             return asString;
         }
+
+        /// <summary>
+        /// Retourne le mois courant 
+        /// </summary>
+       
         public String moisCourant()
         {
 
@@ -31,6 +45,10 @@ namespace GSB_CSHARP
             return asString;
         }
 
+        /// <summary>
+        /// Retourne le mois suivant en fonction de la date d'aujourd'hui
+        /// </summary>
+        
         public String moisSuivant()
         {
             ajd = ajd.AddMonths(+1);

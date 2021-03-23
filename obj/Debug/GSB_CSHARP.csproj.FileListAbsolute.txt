@@ -33,3 +33,4 @@ D:\VS2019\GSB_CSHARP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\VS2019\GSB_CSHARP\obj\Debug\GSB_CSHARP.csproj.CopyComplete
 D:\VS2019\GSB_CSHARP\obj\Debug\GSB_CSHARP.exe
 D:\VS2019\GSB_CSHARP\obj\Debug\GSB_CSHARP.pdb
+D:\VS2019\GSB_CSHARP\bin\Debug\GSB_CSHARP.xml
