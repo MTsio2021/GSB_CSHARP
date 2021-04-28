@@ -43,7 +43,7 @@ namespace WindowsServiceGsb
         /// </summary>
         private void InitializeTimer()
         {
-            timer1.Interval = 10000;
+            timer1.Interval = 10000; //86 400 000 pour 24H
             timer1.Elapsed += timer1_Tick;
 
             timer1.Enabled = true;

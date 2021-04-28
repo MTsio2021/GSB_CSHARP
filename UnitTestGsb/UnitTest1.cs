@@ -13,11 +13,21 @@ namespace UnitTestGsb
 
        
         //TEST UNITAIRE
-        public void TestMethod1()
+        public void TestMethodPrecedent()
         {
 
-            Assert.AreEqual("202102", date.moisPrecedent(), "Erreur");
-            Assert.AreEqual("202104", date.moisSuivant(), "Erreur");
+            Assert.AreEqual("202102", date.moisPrecedent(), "Le mois précédent n'est pas le bon");
+            
+        }
+
+        public void TestMethodSuivant()
+        {
+            Assert.AreEqual("202104", date.moisSuivant(), "Le mois suivant n'est pas le bon");
+        }
+
+        public void TestMethodCourant()
+        {
+            Assert.AreEqual("202103", date.moisCourant(), "Le mois courant n'est pas le bon");
         }
     }
 }

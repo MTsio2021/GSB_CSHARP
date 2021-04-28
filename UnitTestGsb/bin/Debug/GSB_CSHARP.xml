@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GSB_CSHARP</name>
+    </assembly>
+    <members>
+        <member name="M:GSB_CSHARP.ConnexionSql.getInstance(System.String,System.String,System.String,System.String)">
+            méthode de création d'une instance de connexion si elle n'existe pas (singleton)
+        </member>
+        <member name="M:GSB_CSHARP.ConnexionSql.openConnection">
+            Ouverture de la connexion
+        </member>
+        <member name="M:GSB_CSHARP.ConnexionSql.closeConnection">
+            Fermeture de la connexion
+        </member>
+        <member name="M:GSB_CSHARP.ConnexionSql.reqExec(System.String)">
+            Exécutiuon d'une requête
+        </member>
+        <member name="M:GSB_CSHARP.Form1.Form1_Load_1(System.Object,System.EventArgs)">
+            <summary>
+            Chargement du formulair, connexion et remplissage des datatables et datagrid view
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GSB_CSHARP.Form1.InitializeTimer">
+            <summary>
+            Création du timer
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.Form1.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Fonction modifiant les états en fonctions du timer
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:GSB_CSHARP.Form1.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.Form1.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:GSB_CSHARP.Form1.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.GestionDate.dateJour">
+            <summary>
+            Retourne la date du jour
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.GestionDate.moisPrecedent">
+            <summary>
+            Retourne le mois précédent par rapport à la date d'aujourd'hui
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.GestionDate.moisCourant">
+            <summary>
+            Retourne le mois courant 
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.GestionDate.moisSuivant">
+            <summary>
+            Retourne le mois suivant en fonction de la date d'aujourd'hui
+            </summary>
+        </member>
+        <member name="M:GSB_CSHARP.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:GSB_CSHARP.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:GSB_CSHARP.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:GSB_CSHARP.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>

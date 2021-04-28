@@ -42,3 +42,4 @@ D:\VS2019\GSB_CSHARP\UnitTestGsb\obj\Debug\UnitTestGsb.csproj.CoreCompileInputs.
 D:\VS2019\GSB_CSHARP\UnitTestGsb\obj\Debug\UnitTestGsb.csproj.CopyComplete
 D:\VS2019\GSB_CSHARP\UnitTestGsb\obj\Debug\UnitTestGsb.dll
 D:\VS2019\GSB_CSHARP\UnitTestGsb\obj\Debug\UnitTestGsb.pdb
+D:\VS2019\GSB_CSHARP\UnitTestGsb\bin\Debug\GSB_CSHARP.xml

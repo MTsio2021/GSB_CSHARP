@@ -35,3 +35,4 @@ D:\VS2019\GSB_CSHARP\WindowsServiceGsb\obj\Debug\WindowsServiceGsb.csproj.CoreCo
 D:\VS2019\GSB_CSHARP\WindowsServiceGsb\obj\Debug\WindowsServiceGsb.csproj.CopyComplete
 D:\VS2019\GSB_CSHARP\WindowsServiceGsb\obj\Debug\WindowsServiceGsb.exe
 D:\VS2019\GSB_CSHARP\WindowsServiceGsb\obj\Debug\WindowsServiceGsb.pdb
+D:\VS2019\GSB_CSHARP\WindowsServiceGsb\bin\Debug\GSB_CSHARP.xml
